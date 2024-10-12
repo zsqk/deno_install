@@ -67,7 +67,7 @@ if [ ! -d "$bin_dir" ]; then
 	mkdir -p "$bin_dir"
 fi
 
-curl --fail --location --progress-bar --output "$exe.zip" "$deno_uri"
+curl -k --fail --location --progress-bar --output "$exe.zip" "$deno_uri"
 if command -v unzip >/dev/null; then
 	unzip -d "$bin_dir" -o "$exe.zip"
 else
